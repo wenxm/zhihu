@@ -28,24 +28,28 @@ import krelve.app.kuaihu.util.HttpUtils;
 
 /**
  * Created by wwjun.wang on 2015/8/11.
- * test
+ * revise by wenxm on 2015/12/27
+ * 启动界面，有一个图片逐渐放大的效果
  */
+
 public class SplashActivity extends Activity {
-    private ImageView iv_start;
+    private ImageView iv_start; //定义一个启动界面图片控件
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //去掉标题栏
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //强制全屏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+       //绑定xml
         setContentView(R.layout.splash);
         iv_start = (ImageView) findViewById(R.id.iv_start);
         initImage();
-
-
     }
 
+    //初始化图片的方法
     private void initImage() {
         File dir = getFilesDir();
         final File imgFile = new File(dir, "start.jpg");
@@ -63,7 +67,6 @@ public class SplashActivity extends Activity {
         scaleAnim.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
             }
 
             @Override
@@ -112,7 +115,6 @@ public class SplashActivity extends Activity {
             }
         });
         iv_start.startAnimation(scaleAnim);
-
     }
 
     private void startActivity() {
