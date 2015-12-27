@@ -59,6 +59,7 @@ public class SplashActivity extends Activity {
             iv_start.setImageResource(R.mipmap.start);
         }
 
+        //设置放大动画
         final ScaleAnimation scaleAnim = new ScaleAnimation(1.0f, 1.2f, 1.0f, 1.2f,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
                 0.5f);
