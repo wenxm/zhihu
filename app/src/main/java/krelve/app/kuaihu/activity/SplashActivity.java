@@ -59,7 +59,7 @@ public class SplashActivity extends Activity {
             iv_start.setImageResource(R.mipmap.start);
         }
 
-        //设置放大动画
+        //设置启动时的放大动画
         final ScaleAnimation scaleAnim = new ScaleAnimation(1.0f, 1.2f, 1.0f, 1.2f,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
                 0.5f);
@@ -92,12 +92,10 @@ public class SplashActivity extends Activity {
                                         startActivity();
                                     }
                                 });
-
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
                         }
-
                         @Override
                         public void onFailure(int i, Header[] headers, byte[] bytes,
                                               Throwable throwable) {
@@ -109,15 +107,12 @@ public class SplashActivity extends Activity {
                     startActivity();
                 }
             }
-
             @Override
             public void onAnimationRepeat(Animation animation) {
-
             }
         });
         iv_start.startAnimation(scaleAnim);
     }
-
     private void startActivity() {
         Intent intent = new Intent(SplashActivity.this, MainActivity.class);
         startActivity(intent);
@@ -125,7 +120,6 @@ public class SplashActivity extends Activity {
                 android.R.anim.fade_out);
         finish();
     }
-
     public void saveImage(File file, byte[] bytes) {
         try {
             if (file.exists()) {
@@ -138,6 +132,5 @@ public class SplashActivity extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
