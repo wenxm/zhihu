@@ -28,7 +28,7 @@ import krelve.app.kuaihu.util.HttpUtils;
 
 /**
  * Created by wwjun.wang on 2015/8/11.
- *
+ * test
  */
 public class SplashActivity extends Activity {
     private ImageView iv_start;
