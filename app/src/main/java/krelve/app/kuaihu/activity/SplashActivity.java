@@ -28,6 +28,7 @@ import krelve.app.kuaihu.util.HttpUtils;
 
 /**
  * Created by wwjun.wang on 2015/8/11.
+ *
  */
 public class SplashActivity extends Activity {
     private ImageView iv_start;
@@ -36,7 +37,8 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.splash);
         iv_start = (ImageView) findViewById(R.id.iv_start);
         initImage();
@@ -81,7 +83,8 @@ public class SplashActivity extends Activity {
                                     }
 
                                     @Override
-                                    public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+                                    public void onFailure(int i, Header[] headers, byte[] bytes,
+                                                          Throwable throwable) {
                                         startActivity();
                                     }
                                 });
@@ -92,7 +95,8 @@ public class SplashActivity extends Activity {
                         }
 
                         @Override
-                        public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+                        public void onFailure(int i, Header[] headers, byte[] bytes,
+                                              Throwable throwable) {
                             startActivity();
                         }
                     });
